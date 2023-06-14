@@ -1,0 +1,27 @@
+<section>
+    <h1>Todos los productos</h1>
+    <div>
+        <div>
+            {{#each products}}
+            <div>
+                <div>
+                    <img src={{this.pid.thumbnail}} alt={{this.pid.title}} style="height: 100px;">
+                </div>
+                <div style="height: 70px;">
+                    <div>
+                        <p>{{this.pid.title}}</p>
+                        <p>Unit price: usd {{this.pid.price}}</p>
+                        <p>Unit/s: {{this.qty}}</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <p>subtotal: usd {{subtotal}}</p>
+                        <button disabled="disabled">Delete item</button>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</section>
